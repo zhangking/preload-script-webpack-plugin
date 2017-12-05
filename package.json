@@ -1,6 +1,6 @@
 {
     "name": "preload-script-webpack-plugin",
-    "version": "0.0.2",
+    "version": "1.0.0",
     "main": "index.js",
     "scripts": {
       "lint": "eslint --quiet -f codeframe index.js test/spec.js",
@@ -16,7 +16,6 @@
     "keywords": [
       "webpack",
       "plugin",
-      "html-webpack-plugin",
       "script",
       "preload",
       "resource hints"
@@ -31,7 +30,6 @@
       "babel-eslint": "^7.1.1",
       "eslint": "^3.14.1",
       "eslint-config-google": "^0.7.1",
-      "html-webpack-plugin": "^2.26.0",
       "jasmine": "^2.5.3",
       "webpack": "^3.2.0"
     },
