@@ -1,6 +1,6 @@
 {
     "name": "preload-script-webpack-plugin",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "main": "index.js",
     "scripts": {
       "lint": "eslint --quiet -f codeframe index.js test/spec.js",

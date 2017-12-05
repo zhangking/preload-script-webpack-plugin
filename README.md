@@ -9,6 +9,7 @@ It won't insert html template, replaced by inserting the target chunk file.
 
 ```
 plugins = [new PreloadWebpackPlugin({
-    insertChunk: 'vendor' 
+    insertChunk: 'vendor' ,
+    delay: 0 
 }]
 ```

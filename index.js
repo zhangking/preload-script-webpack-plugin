@@ -7,7 +7,8 @@ const flatten = arr => arr.reduce((prev, curr) => prev.concat(curr), []);
 const defaultOptions = {
   rel: 'preload',
   include: 'asyncChunks',
-  fileBlacklist: [/\.map/]
+  fileBlacklist: [/\.map/],
+  delay: 0
 };
 
 class PreloadPlugin {
@@ -91,9 +92,11 @@ class PreloadPlugin {
           (function() {
             var params = ${JSON.stringify(linkParams)};
             ${createLinkFunction}
-            for(var i in params){
-              createLink(params[i]);
-            }
+            setTimeout(function(){
+              for(var i in params){
+                createLink(params[i]);
+              }
+            },${options.delay});
           })()
         `;
         const targetChunkFile = compilation.chunks.find((i) => {return i.name == options.insertChunk;})
